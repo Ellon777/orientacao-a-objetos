@@ -45,8 +45,5 @@
 
     $produto4 -> setPreco(100);
     echo "Nome do produto: {$produto4->getNome()} <br>
-    Preço: {$produto4->getPreco()}<br>";
-
-    
-    
+    Preço: {$produto4->getPreco()}<br>"; 
 ?>
