@@ -1,13 +1,12 @@
 <?php
 
 class Ator {
-    private $nome;
-    private $nacionalidade;
 
-    public function __construct($nome, $nacionalidade) {
-        $this->nome = $nome;
-        $this->nacionalidade = $nacionalidade;
-    }
+    public function __construct(
+        private string $nome = "",
+        private string $nacionalidade = "",
+        private array $filmes = array()
+    ){}
 
     // GETTERS
     public function getNome() {
@@ -18,6 +17,10 @@ class Ator {
         return $this->nacionalidade;
     }
 
+    public function getFilmes() {
+        return $this->filmes;
+    }
+
     // SETTERS
     public function setNome($nome) {
         $this->nome = $nome;
@@ -25,6 +28,10 @@ class Ator {
 
     public function setNacionalidade($nacionalidade) {
         $this->nacionalidade = $nacionalidade;
+    }
+
+    public function setFilmes($filme) {
+        $this->filmes[] = $filme;
     }
 }
 ?>

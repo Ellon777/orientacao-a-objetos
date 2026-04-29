@@ -1,13 +1,13 @@
 <?php
 
 class Filme {
-    private $titulo;
-    private $ano;
 
-    public function __construct($titulo, $ano) {
-        $this->titulo = $titulo;
-        $this->ano = $ano;
-    }
+
+    public function __construct(
+        private string $titulo = "",
+        private int $ano = 0,
+        private array $atores = array()
+    ){}
 
     // GETTERS
     public function getTitulo() {
@@ -18,6 +18,10 @@ class Filme {
         return $this->ano;
     }
 
+    public function getAtores() {
+        return $this->atores;
+    }
+
     // SETTERS
     public function setTitulo($titulo) {
         $this->titulo = $titulo;
@@ -25,6 +29,10 @@ class Filme {
 
     public function setAno($ano) {
         $this->ano = $ano;
+    }
+
+    public function setAtores($ator) {
+        $this->atores[] = $ator;
     }
 }
 ?>

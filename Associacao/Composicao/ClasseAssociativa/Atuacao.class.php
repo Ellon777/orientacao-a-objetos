@@ -4,15 +4,12 @@ require_once "Ator.class.php";
 require_once "Filme.class.php";
 
 class Atuacao {
-    private $papel;
-    private $ator;
-    private $filme;
 
-    public function __construct($papel, $ator, $filme) {
-        $this->papel = $papel;
-        $this->ator = $ator;
-        $this->filme = $filme;
-    }
+    public function __construct(
+        private string $papel = "",
+        private ?Ator $ator = null,
+        private ?Filme $filme = null
+    ){}
 
     // GETTERS
     public function getPapel() {
